@@ -58,3 +58,44 @@ Teletubbies(텔레토비)는 알록달록한 아이디어가 가득한 사람들
 
 # 🎈 More Info
 📖 [위키](https://github.com/codestates/Colorboration/wiki)
+
+# 실행 방법
+<details>
+<summary>서버</summary>
+<div markdown="1">
+  server 폴더 안에 .env 파일 만들고 다음과 같이 적는다.
+
+  ```jsx
+
+  DATABASE_HOST=localhost
+  DATABASE_USERNAME=root
+  DATABASE_PASSWORD=자신의 디비 암호
+  DATABASE_PORT=3306
+  DATABASE_NAME=colorboration
+  
+  ```
+  
+  ```jsx
+  
+  npm install // 모듈 설치하고 
+  npm start   // 서버 실행하고 데이타베이스 테이블 만들기 
+  // 이후 서버를 먼저 멈춘다. ctrl + c
+  // 그리고 다음의 명령을 순서대로 실행시킨다.
+  // 명령어 실행 순서가 중요합니다!!!!
+  npx sequelize-cli db:seed --seed tags.js
+  npx sequelize-cli db:seed --seed users.js
+  npx sequelize-cli db:seed --seed palettes.js
+  
+  ```
+  
+  
+  위 코드는 정적 데이터를 디비에 저장하는 작업입니다
+  <br>
+  자신의 디비로 가서 tags, users, palettes에 데이터가 잘 들어갔는지 확인합니다
+  <br>
+  이제 다시 서버를 실행합니다.
+  <br>
+  그리고 client 폴더로 이동해서 모듈설치하고(`npm i`) 실행을(`npm start`) 시킵니다.
+</div>
+</details>
+
