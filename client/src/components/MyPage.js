@@ -118,7 +118,7 @@ function MyPage() {
   const getPalette = () => {
     axios
       // like 팔레트
-      .get("http://localhost:4000/likes", {
+      .get("https://color-boration.tk/likes", {
         headers: {
           Authorization: state.accessToken,
         },
@@ -137,7 +137,7 @@ function MyPage() {
       });
     //마이 팔레트
     axios
-      .get(`http://localhost:4000/palettes/?user_id=${state.userInfo.id}`, {
+      .get(`https://color-boration.tk/palettes/?user_id=${state.userInfo.id}`, {
         withCredentials: true,
       })
       .then((response) => {

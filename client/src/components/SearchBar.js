@@ -23,7 +23,7 @@ function SearchBar() {
   // const handleSearch = () => {
   //   if (tagsId.length !== 0) {
   //     axios
-  //       .get("http://localhost:4000/palettes/filterd", tagsId, {
+  //       .get("https://color-boration.tk/palettes/filterd", tagsId, {
   //         withCredentials: true,
   //       })
   //       .then((response) => {

@@ -22,8 +22,8 @@ function PaletteFrame({ isRandom }) {
     }
   };
   document.addEventListener("scroll", onScroll);
-  const allEndPoint = "http://localhost:4000/palettes/entire";
-  const randomEndPoint = "http://localhost:4000/palettes/random";
+  const allEndPoint = "https://color-boration.tk/palettes/entire";
+  const randomEndPoint = "https://color-boration.tk/palettes/random";
   const lightPalettes = [3, 8, 9, 10, 11, 13, 30, 31, 32];
 
   const getPalette = () => {

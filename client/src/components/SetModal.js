@@ -49,7 +49,7 @@ function SetModal({ setShowSetModal }) {
       } else if (userName !== "" && isValidPassword) {
         // 유저네임 중복 확인
         axios
-          .post("http://localhost:4000/auth/name", {
+          .post("https://color-boration.tk/auth/name", {
             headers: {
               Authorization: localStorage.getItem(state.accessToken),
             },
@@ -69,7 +69,7 @@ function SetModal({ setShowSetModal }) {
       } else {
         // 유저네임 중복 검사 통과 후 유저 정보 수정 patch 요청
         axios
-          .patch("http://localhost:4000/users", {
+          .patch("https://color-boration.tk/users", {
             headers: {
               Authorization: localStorage.getItem(state.accessToken),
             },

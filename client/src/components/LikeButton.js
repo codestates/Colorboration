@@ -18,7 +18,7 @@ function LikeButton({ palette, isPalettePage }) {
   const getLike = () => {
     if (state.isLogin) {
       axios
-        .get(`http://localhost:4000/likes`, {
+        .get(`https://color-boration.tk/likes`, {
           headers: {
             Authorization: state.accessToken,
           },
@@ -41,7 +41,7 @@ function LikeButton({ palette, isPalettePage }) {
   };
   const getLikeCount = () => {
     axios
-      .get(`http://localhost:4000/palettes/${palette.id}`, {
+      .get(`https://color-boration.tk/palettes/${palette.id}`, {
         withCredentials: true,
       })
       .then((response) => {
@@ -60,7 +60,7 @@ function LikeButton({ palette, isPalettePage }) {
         // 좋아요가 안 눌러져 있다면
         axios
           .post(
-            `http://localhost:4000/likes/${palette.id}`,
+            `https://color-boration.tk/likes/${palette.id}`,
             {},
             {
               headers: {
@@ -81,7 +81,7 @@ function LikeButton({ palette, isPalettePage }) {
         // 좋아요가 눌러져 있다면
         console.log("되니");
         axios
-          .delete(`http://localhost:4000/likes/${palette.id}`, {
+          .delete(`https://color-boration.tk/likes/${palette.id}`, {
             headers: {
               Authorization: state.accessToken,
             },
