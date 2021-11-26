@@ -60,7 +60,7 @@ function LoginModal({ setShowSignUpModal }) {
     } else {
       // 유효성 검사 통과 후 로그인 요청
       axios
-        .post("http://localhost:4000/auth/login", loginState, {
+        .post("https://color-boration.tk/auth/login", loginState, {
           withCredentials: true,
         })
         .then((response) => {
@@ -80,7 +80,7 @@ function LoginModal({ setShowSignUpModal }) {
     const isAuthenticated = (token) => {
       console.log(token);
       axios
-        .get("http://localhost:4000/users", {
+        .get("https://color-boration.tk/users", {
           headers: {
             Authorization: token,
           },

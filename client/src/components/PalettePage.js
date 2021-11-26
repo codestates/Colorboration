@@ -24,7 +24,7 @@ function PalettePage({ paltte, handleLike }) {
 
   const getPalette = () => {
     axios
-      .get(`http://localhost:4000/palettes/${paletteid}`, {
+      .get(`https://color-boration.tk/palettes/${paletteid}`, {
         withCredentials: true,
       })
       .then((response) => {

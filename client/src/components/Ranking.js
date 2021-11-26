@@ -15,7 +15,7 @@ function Ranking() {
   const getRankingPalette = () => {
     console.log("getRankingPalette");
     axios
-      .get(`http://localhost:4000/palettes/ranking/?period=${period}`, {
+      .get(`https://color-boration.tk/palettes/ranking/?period=${period}`, {
         withCredentials: true,
       })
       .then((response) => {

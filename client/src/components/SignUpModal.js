@@ -65,7 +65,7 @@ function SignUpModal({ setShowSignUpModal }) {
       console.log("~~~~~~~~~3");
       axios
         .post(
-          "http://localhost:4000/auth/name",
+          "https://color-boration.tk/auth/name",
           { name: signUpState.name },
           {
             withCredentials: true,
@@ -76,7 +76,7 @@ function SignUpModal({ setShowSignUpModal }) {
           console.log("네임 중복 검사를 통과했습니다");
           // 유저네임 중복 검사 통과 후 회원 가입 post 요청
           axios
-            .post("http://localhost:4000/auth/signup", signUpState, {
+            .post("https://color-boration.tk/auth/signup", signUpState, {
               withCredentials: true,
             })
             .then((res) => {

@@ -27,7 +27,7 @@ function Create() {
       return;
     } else {
       axios
-        .post("http://localhost:4000/palettes", createState, {
+        .post("https://color-boration.tk/palettes", createState, {
           headers: {
             Authorization: state.accessToken,
           },
